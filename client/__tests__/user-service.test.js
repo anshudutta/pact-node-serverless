@@ -20,10 +20,6 @@ describe('user-service', () => {
 		it('should get list from server', async () => {
 			await provider.addInteraction(interactions.getAllUsers);
 			const users = await getAllUsers();
-			expect(users).toEqual([
-				{ name: 'John Doe', email: 'john@doe.com' },
-				{ name: 'Jane Doe', email: 'jane@doe.com' },
-			]);
 			await provider.verify();
 		});
 	});

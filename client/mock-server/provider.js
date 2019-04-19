@@ -1,6 +1,5 @@
 const path = require('path');
 const pact = require('pact');
-const interactions = require('./interactions');
 
 const provider = pact({
 	// current service at hand, it makes it easier to know who would be broken by the change
