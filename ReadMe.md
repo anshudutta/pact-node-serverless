@@ -1,4 +1,4 @@
-# Example app for implementing consumer driven contract with PACT
+# Consumer driven contract with PACT-NODE
 
 ## Install
 
@@ -14,12 +14,11 @@ Build and spin up
 ``bash
 docker-compose up -d --build
 
-```
+````
 This will start the following
 
 -   Provider on port 3000
 -   Pact Broker on port 3080
-```
 
 ## Usage
 
@@ -27,7 +26,7 @@ This will start the following
 
 ```bash
 test:pact:consumer
-```
+````
 
 ### Pact - provider
 
