@@ -1,0 +1,19 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "The server",
+	"main": "handler.js",
+	"scripts": {
+		"test": "jest",
+		"serverless": "serverless offline start",
+		"test:pact:provider": "node __tests__/user-pact.js"
+	},
+	"author": "Anshu Dutta",
+	"license": "ISC",
+	"devDependencies": {
+		"@pact-foundation/pact-node": "^8.1.2",
+		"jest": "^24.7.1",
+		"serverless-kubeless": "^0.7.1",
+		"serverless-kubeless-offline": "^0.1.7"
+	}
+}

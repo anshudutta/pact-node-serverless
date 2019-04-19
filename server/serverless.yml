@@ -1,0 +1,17 @@
+service: server
+
+provider:
+    name: kubeless
+    runtime: nodejs_distroless8
+
+functions:
+    health-check:
+        handler: handler.healthCheck
+    users:
+        handler: handler.getUsers
+    pact-user-setup:
+        handler: handler.pactUserSetup
+
+plugins:
+    - serverless-kubeless
+    - serverless-kubeless-offline

@@ -1,0 +1,62 @@
+I, [2019-04-19T22:50:42.099056 #53416]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /interactions. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-19T22:50:42.104594 #53416]  INFO -- : Registered expected interaction GET /users
+D, [2019-04-19T22:50:42.104798 #53416] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-19T22:50:42.125243 #53416]  INFO -- : Received request GET /users
+D, [2019-04-19T22:50:42.125334 #53416] DEBUG -- : {
+  "path": "/users",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2019-04-19T22:50:42.125491 #53416]  INFO -- : Found matching response for GET /users
+D, [2019-04-19T22:50:42.125561 #53416] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@doe.com"
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "jane@doe.com"
+    }
+  ]
+}
+I, [2019-04-19T22:50:42.137809 #53416]  INFO -- : Received OPTIONS request for mock service administration endpoint GET /interactions/verification. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-19T22:50:42.141373 #53416]  INFO -- : Verifying - interactions matched
+I, [2019-04-19T22:50:42.145986 #53416]  INFO -- : Received OPTIONS request for mock service administration endpoint DELETE /interactions. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-19T22:50:42.149422 #53416]  INFO -- : Cleared interactions
+I, [2019-04-19T22:50:42.156687 #53416]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /pact. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-19T22:50:42.160401 #53416]  INFO -- : Writing pact for UserService to /Users/anshudutta/Projects/pact-node-serverless/client/pacts/client-userservice.json

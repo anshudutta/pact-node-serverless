@@ -1,0 +1,40 @@
+{
+  "consumer": {
+    "name": "client"
+  },
+  "provider": {
+    "name": "UserService"
+  },
+  "interactions": [
+    {
+      "description": "a request to retrieve users",
+      "providerState": "it has a list of users",
+      "request": {
+        "method": "GET",
+        "path": "/users"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@doe.com"
+          },
+          {
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "jane@doe.com"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

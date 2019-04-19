@@ -1,0 +1,15 @@
+service: client
+
+provider:
+    name: kubeless
+    runtime: nodejs_distroless8
+
+functions:
+    health-check:
+        handler: handler.healthCheck
+    users:
+        handler: handler.getUsers
+
+plugins:
+    - serverless-kubeless
+    - serverless-kubeless-offline
