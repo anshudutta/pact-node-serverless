@@ -4,17 +4,20 @@
 
 Clone the repo
 
-From the root folder
+From the root folder run:
 
 ```bash
 docker-compose up -d
 ```
 
-Build and spin up
-``bash
-docker-compose up -d --build
+OR
 
-````
+Build and spin up
+
+```bash
+docker-compose up -d --build
+```
+
 This will start the following
 
 -   Provider on port 3000
@@ -22,14 +25,14 @@ This will start the following
 
 ## Usage
 
-### Pact - consumer
+### Test consumer
 
 ```bash
-test:pact:consumer
-````
+npm run test:pact:consumer
+```
 
-### Pact - provider
+### Test provider
 
 ```bash
-test:pact:provider
+pm run test:pact:provider
 ```
