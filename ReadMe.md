@@ -74,16 +74,37 @@ pm run test:pact:provider
 
 ### Simulate provider faulure (break provider contract)
 
+Pre requisite: Make sure the pact broker is up and pact files are published
+
+-   From root folder run
+    ```bash
+    docker-compose up -d
+    ```
+-   From the client folder run
+    ```bash
+    npm run test:pact:consumer
+    ```
 -   Change the getUsers function to return email as a property of "contact" object
     ```bash
     [{
       firstName, lastName, contact : {email, phone}
     }]
     ```
+-   Update <b>createUser</b> function in <b>pact-user-setup</b> endpoint in handler.js
+
+-   Rebuild docker image and deploy
+
+    ```bash
+    docker-compose down pact-provider-app
+    docker-compose up -d --build pact-provider-app
+    ```
+
 -   Run the provider test
+
     ```bash
     npm run test:pact:provider
     ```
+
 -   The provider tests should break indicating break in contract
 
 ### Change consumer contract
