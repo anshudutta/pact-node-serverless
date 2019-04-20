@@ -39,6 +39,16 @@ This will start the following
 
 ## Usage
 
+### The contract:
+
+The consumer expects the following schema @ the provider endpoint : ~/users
+
+```bash
+[{
+  firstName, lastName, email
+}]
+```
+
 ### Test consumer
 
 ```bash
@@ -51,31 +61,48 @@ npm run test:pact:consumer
 pm run test:pact:provider
 ```
 
-### Break consumer contract
+## Testing the pact
 
--   Change the service url to <b> ~/users/all </b> instead of <b>~/users</b>
--   Run
+### Simulate consumer failure (break consumer contract)
 
-```bash
-npm run test:pact:consumer
-```
+-   Change the service url to <b>~/users/all</b> instead of <b>~/users</b>
+-   Run the consumer test
+    ```bash
+    npm run test:pact:consumer
+    ```
+-   The consumer tests should break indicating break in contract
 
-The consumer tests should break indicating break in contract
+### Simulate provider faulure (break provider contract)
 
-### Break provider contract
+-   Change the getUsers function to return email as a property of "contact" object
+    ```bash
+    [{
+      firstName, lastName, contact : {email, phone}
+    }]
+    ```
+-   Run the provider test
+    ```bash
+    npm run test:pact:provider
+    ```
+-   The provider tests should break indicating break in contract
 
--   Change the service url to <b> ~/users/all </b> instead of <b>~/users</b>
--   Update the interactions.js to reflect new behaviour
--   Publish pact files to broker
+### Change consumer contract
 
-```bash
-npm run test:pact:consumer
-```
-
--   Run the server test
-
-```bash
-npm run test:pact:provider
-```
-
-The consumer tests should break indicating break in contract. The provider now needs to be updated with updated contract
+-   Say that the consumer needs phone number from the UserService, like so
+    ```bash
+    [{
+      firstName, lastName, contact : {email, phone}
+    }]
+    ```
+-   Update the interactions.js to reflect new expected contract
+-   Run the test and publish new pact files to broker
+    ```bash
+    npm run test:pact:consumer
+    ```
+-   Notify the server build and run the server test
+    ```bash
+    npm run test:pact:provider
+    ```
+-   The provider tests should break indicating break in contract.
+-   The provider now needs to be updated with updated contract.
+-   Run provider test again to see a green build
