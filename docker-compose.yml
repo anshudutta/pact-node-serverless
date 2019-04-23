@@ -1,36 +1,53 @@
-version: '3'
+version: "3.6"
 
 services:
-    postgres:
-        image: postgres
-        container_name: postgres
-        healthcheck:
-            test: psql postgres --command "select 1" -U postgres
-        ports:
-            - '5432:5432'
-        environment:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: password
-            POSTGRES_DB: postgres
+  postgres:
+    image: postgres
+    container_name: postgres
+    healthcheck:
+      test: psql postgres --command "select 1" -U postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
 
-    pact-broker-app:
-        image: dius/pact-broker
-        container_name: pact-broker-app
-        links:
-            - postgres
-        ports:
-            - '3080:80'
-        environment:
-            PACT_BROKER_DATABASE_USERNAME: postgres
-            PACT_BROKER_DATABASE_PASSWORD: password
-            PACT_BROKER_DATABASE_HOST: postgres
-            PACT_BROKER_DATABASE_NAME: postgres
+  pact-broker-app:
+    image: dius/pact-broker
+    container_name: pact-broker-app
+    links:
+      - postgres
+    ports:
+      - "3080:80"
+    environment:
+      PACT_BROKER_DATABASE_USERNAME: postgres
+      PACT_BROKER_DATABASE_PASSWORD: password
+      PACT_BROKER_DATABASE_HOST: postgres
+      PACT_BROKER_DATABASE_NAME: postgres
 
-    pact-provider-app:
-        container_name: pact-provider-app
-        build:
-            context: ./server
-        ports:
-            - '3000:3000'
-        environment:
-            pact.verifier.publishResults: 'true'
+  pact-provider-app:
+    container_name: pact-provider-app
+    build:
+      context: ./server
+    networks:
+      - pact
+    ports:
+      - "3000:3000"
+    environment:
+      pact.verifier.publishResults: "true"
+
+  pact-consumer-app:
+    container_name: pact-consumer-app
+    build:
+      context: ./client
+    networks:
+      - pact
+    ports:
+      - "3050:3000"
+    environment:
+      SERVICE_URL: "http://pact-provider-app:3000"
+
+networks:
+  pact:
+    driver: bridge
