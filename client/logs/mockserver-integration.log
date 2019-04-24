@@ -1,0 +1,413 @@
+I, [2019-04-24T12:47:05.929665 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /interactions. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T12:47:05.945866 #21613]  INFO -- : Registered expected interaction GET /users
+D, [2019-04-24T12:47:05.946147 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-24T12:47:05.972626 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /pact. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T12:51:46.564649 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /interactions. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T12:51:46.579449 #21613]  INFO -- : Registered expected interaction GET /users
+D, [2019-04-24T12:51:46.579609 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-24T12:51:46.611524 #21613]  INFO -- : Received request GET /users
+D, [2019-04-24T12:51:46.611658 #21613] DEBUG -- : {
+  "path": "/users",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2019-04-24T12:51:46.611809 #21613] ERROR -- : Multiple interactions found for GET /users:
+D, [2019-04-24T12:51:46.611952 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+D, [2019-04-24T12:51:46.612078 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-24T12:51:46.622141 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /pact. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T12:53:07.966697 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /interactions. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T12:53:07.982007 #21613]  INFO -- : Registered expected interaction GET /users
+D, [2019-04-24T12:53:07.982145 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-24T12:53:08.004872 #21613]  INFO -- : Received request GET /users
+D, [2019-04-24T12:53:08.004979 #21613] DEBUG -- : {
+  "path": "/users",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2019-04-24T12:53:08.005121 #21613] ERROR -- : Multiple interactions found for GET /users:
+D, [2019-04-24T12:53:08.005263 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+D, [2019-04-24T12:53:08.005383 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+D, [2019-04-24T12:53:08.005498 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-24T12:53:08.015710 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /pact. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T13:04:39.021421 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /interactions. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T13:04:39.032138 #21613]  INFO -- : Registered expected interaction GET /users
+D, [2019-04-24T13:04:39.032267 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-24T13:04:39.051787 #21613]  INFO -- : Received request GET /users
+D, [2019-04-24T13:04:39.051875 #21613] DEBUG -- : {
+  "path": "/users",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2019-04-24T13:04:39.052076 #21613] ERROR -- : Multiple interactions found for GET /users:
+D, [2019-04-24T13:04:39.052184 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+D, [2019-04-24T13:04:39.052314 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+D, [2019-04-24T13:04:39.052447 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+D, [2019-04-24T13:04:39.052542 #21613] DEBUG -- : {
+  "description": "a request to retrieve users",
+  "providerState": "it has a list of users",
+  "request": {
+    "method": "GET",
+    "path": "/users"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@doe.com"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane@doe.com"
+      }
+    ]
+  }
+}
+I, [2019-04-24T13:04:39.062440 #21613]  INFO -- : Received OPTIONS request for mock service administration endpoint POST /pact. Returning CORS headers: {"Access-Control-Allow-Origin"=>"http://localhost", "Access-Control-Allow-Headers"=>"X-Pact-Mock-Service", "Access-Control-Allow-Methods"=>"DELETE, POST, GET, HEAD, PUT, TRACE, CONNECT, PATCH"}.
+I, [2019-04-24T13:07:40.804119 #21613]  INFO -- : Received request GET /
+D, [2019-04-24T13:07:40.804287 #21613] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36",
+    "Dnt": "1",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2019-04-24T13:07:40.804430 #21613] ERROR -- : No matching interaction found for GET /
+E, [2019-04-24T13:07:40.804458 #21613] ERROR -- : Interaction diffs for that route:
+E, [2019-04-24T13:07:40.804486 #21613] ERROR -- : 
+I, [2019-04-24T13:07:41.011052 #21613]  INFO -- : Received request GET /favicon.ico
+D, [2019-04-24T13:07:41.011243 #21613] DEBUG -- : {
+  "path": "/favicon.ico",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36",
+    "Dnt": "1",
+    "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
+    "Referer": "http://localhost:1234/",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2019-04-24T13:07:41.011388 #21613] ERROR -- : No matching interaction found for GET /favicon.ico
+E, [2019-04-24T13:07:41.011414 #21613] ERROR -- : Interaction diffs for that route:
+E, [2019-04-24T13:07:41.011436 #21613] ERROR -- : 
